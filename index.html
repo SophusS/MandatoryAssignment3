@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- https://www.bootstrapcdn.com/ -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.js"></script>
+    <script src="https://unpkg.com/vue@next"></script>
+    <title>First Vue.js App</title>
+</head>
+
+<body>
+        <h1>First Vue.js App</h1>
+        <h2>The String Duplicator</h2>
+
+
+    <div id="app">
+        <input id="inputField" v-model="stringInput" placeholder="input">
+        <input id="inputField2" v-model="amount" placeholder="amount of repeats">
+
+        <button id="button" v-on:click="duplicateString(stringInput, amount)" class="btn btn-primary">Do it!</button>
+        <div id="outputField" v-if="DuplicatedString"> {{DuplicatedString}}</div>
+        
+    </div>
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>
